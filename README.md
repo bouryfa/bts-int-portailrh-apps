@@ -28,26 +28,50 @@ A simple HR Portal application for managing employees using Flask and MySQL.
 
 ## Prerequisites
 
+### Pour Docker (Recommandé)
+- Docker
+- Docker Compose
+
+### Pour Installation Locale
 - Python 3.7+
 - MySQL Server installed and running
 - pip (Python package manager)
 
 ## Setup Instructions
 
-### 1. Clone the Repository
+### Option 1: Docker (Recommandé)
+
+#### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd bts-int-portailrh-apps
 ```
 
-### 2. Install Python Dependencies
+#### 2. Lancer avec Docker Compose
+
+```bash
+docker-compose up --build
+```
+
+L'application sera disponible sur `http://localhost:5000`
+
+### Option 2: Installation Locale
+
+#### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd bts-int-portailrh-apps
+```
+
+#### 2. Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure Database Connection
+#### 3. Configure Database Connection
 
 Edit the `.env` file with your MySQL credentials:
 
@@ -60,7 +84,7 @@ MYSQL_PORT=3306
 DEBUG=True
 ```
 
-### 4. Initialize the Database
+#### 4. Initialize the Database
 
 Run the following command to create the database and tables:
 
@@ -68,7 +92,7 @@ Run the following command to create the database and tables:
 python app.py init
 ```
 
-### 5. Run the Application
+#### 5. Run the Application
 
 ```bash
 python app.py
